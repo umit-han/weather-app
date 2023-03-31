@@ -22,4 +22,20 @@ export default defineNuxtConfig({
   pinia: {
     autoImports: ["defineStore", "acceptHMRUpdate", "storeToRefs"],
   },
+
+  app: {
+    head: {
+      title: "Weather App",
+      meta: [
+        { charset: "utf-8" },
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
+        {
+          hid: "Weather",
+          name: "Weather",
+          content: "Weather App",
+        },
+      ],
+      link: [{ rel: "icon", type: "image/x-icon", href: "public/favicon.ico" }],
+    },
+  },
 });

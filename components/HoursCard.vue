@@ -16,7 +16,7 @@
     </div>
 </template>
 
-<script setup>
+<script setup langs="ts">
 
   const store = useWeatherStore()
   const { weatherData } = storeToRefs(store);
@@ -27,6 +27,6 @@
 
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 
 </style>
