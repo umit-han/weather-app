@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import tailwindForms from "@tailwindcss/forms";
 
 export default <Partial<Config>>{
   content: ["/pages/**/*.{vue,js,ts}", "/components/**/*.{vue,js,ts}"],
@@ -28,4 +29,5 @@ export default <Partial<Config>>{
       },
     },
   },
+  plugins: [tailwindForms()],
 };
