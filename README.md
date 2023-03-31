@@ -23,6 +23,8 @@ Start the development server on http://localhost:3000
 
 ```bash
 npm run dev
+#or 
+yarn dev
 ```
 
 ## Production
@@ -31,12 +33,16 @@ Build the application for production:
 
 ```bash
 npm run build
+#or 
+yarn build
 ```
 
 Locally preview production build:
 
 ```bash
 npm run preview
+#or 
+yarn preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
