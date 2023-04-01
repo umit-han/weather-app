@@ -19,9 +19,9 @@
 <script setup langs="ts">
 
     const store = useWeatherStore()
-    // const {  fetchWeather } = storeToRefs(store);
     const {  fetchWeather } = store;
     const searchValue = ref('');
+    let userLocation = '';
 
     function getLocation() {
       if (navigator.geolocation) {
@@ -30,21 +30,18 @@
     }
 
     function setPosition(position) {
-        searchValue = position.coords.latitude+ ','+ position.coords.longitude
-        console.log(searchValue);
+        userLocation = position.coords.latitude+ ','+ position.coords.longitude
+        fetchWeather(userLocation);
     }
 
     const searchHandle = () => {
         fetchWeather(searchValue.value);
         searchValue.value = '';
-        console.log(searchValue.value, 'Button');
     }
     
-    onMounted(() => {
+    onBeforeMount(() => {
         getLocation();
-        fetchWeather(searchValue.value);
     });
-
 
 
 </script>
