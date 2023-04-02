@@ -2,6 +2,7 @@ export const useWeatherStore = defineStore("weather", {
   state: () => ({
     // weatherKey: "f11d4cbdc4624d94986143412232903",
     weatherData: [],
+    regionData: [],
   }),
 
   getters: {},
@@ -17,7 +18,26 @@ export const useWeatherStore = defineStore("weather", {
         if (data) {
           this.weatherData = data.value;
         }
-        console.log(region, "regi");
+      } catch (error) {
+        console.log(error);
+      }
+    },
+
+    async fetchGeocode(searchValue: string) {
+      try {
+        const { data }: any = await useFetch(
+          `https://wft-geo-db.p.rapidapi.com/v1/geo/cities?minPopulation=1000000&namePrefix=${searchValue}`,
+          {
+            headers: {
+              "X-RapidAPI-Key":
+                "12c2022078msh338fda3b256abf8p1a0608jsn879dddf1a854",
+              "X-RapidAPI-Host": "wft-geo-db.p.rapidapi.com",
+            },
+          }
+        );
+        if (data) {
+          this.regionData = data.value.data;
+        }
       } catch (error) {
         console.log(error);
       }

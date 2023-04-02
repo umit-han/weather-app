@@ -33,7 +33,7 @@
                     <p class="text-textDark text-base">Visibility:</p>
                     <p class="text-textDark text-base">{{ weatherData.current.vis_km }} km</p>
                 </div>
-                <div class="flex justify-between items-center py-2 border-b border-b-gray100">
+                <div class="flex justify-between items-center py-2">
                     <p class="text-textDark text-base">Precipitation:</p>
                     <p class="text-textDark text-base">{{ weatherData.current.precip_mm }} mm/s</p>
                 </div>
@@ -44,7 +44,7 @@
 
 <script setup langs="ts">
 
-    const store = useWeatherStore()
+    const store = useWeatherStore();
     const { weatherData } = storeToRefs(store);
 
 </script>
