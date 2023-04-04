@@ -10,3 +10,19 @@
         font-family: 'Montserrat Alternates', sans-serif;
     }
 }
+
+
+
+body {
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.dark body {
+    background-color: #111927;
+    color: #ebf4f1;
+}
+
+.radius-lg {
+    border-radius: 6px;
+}

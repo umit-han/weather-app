@@ -1,6 +1,5 @@
 export const useWeatherStore = defineStore("weather", {
   state: () => ({
-    // weatherKey: "f11d4cbdc4624d94986143412232903",
     weatherData: [],
     regionData: [],
   }),
@@ -8,7 +7,7 @@ export const useWeatherStore = defineStore("weather", {
   getters: {},
 
   actions: {
-    async fetchWeather(region: any) {
+    async fetchWeather(region: string) {
       try {
         const { data }: any = await useFetch(
           `https://api.weatherapi.com/v1/forecast.json?key=f11d4cbdc4624d94986143412232903&q=${

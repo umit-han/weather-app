@@ -12,9 +12,11 @@
     "@nuxtjs/tailwindcss": "^6.6.0",
     "@pinia/nuxt": "^0.4.7",
     "@tailwindcss/forms": "^0.5.3",
+    "autoprefixer": "^10.4.14",
     "nuxt": "^3.3.1",
     "nuxt-icon": "^0.3.3",
     "pinia": "^2.0.33",
+    "postcss": "^8.4.21",
     "tailwindcss-dark-mode": "^1.1.7"
   }
 }
