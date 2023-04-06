@@ -11,15 +11,13 @@ export const useWeatherStore = defineStore("weather", {
       try {
         const { data }: any = await useFetch(
           `https://api.weatherapi.com/v1/forecast.json?key=f11d4cbdc4624d94986143412232903&q=${
-            region ? region : "London"
+            region || "London"
           }&days=7&aqi=no&alerts=no`
         );
         if (data) {
           this.weatherData = data.value;
         }
-      } catch (error) {
-        console.log(error);
-      }
+      } catch (error) {}
     },
 
     async fetchGeocode(searchValue: string) {
@@ -37,9 +35,7 @@ export const useWeatherStore = defineStore("weather", {
         if (data) {
           this.regionData = data.value.data;
         }
-      } catch (error) {
-        console.log(error);
-      }
+      } catch (error) {}
     },
   },
 });

@@ -1,28 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
-    * {
-        font-family: 'Montserrat Alternates', sans-serif;
-    }
+  * {
+    font-family: "Montserrat Alternates", sans-serif;
+  }
 }
 
-
-
 body {
-    background-color: #fff;
-    color: rgba(0, 0, 0, 0.8);
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.8);
 }
 
 .dark body {
-    background-color: #111927;
-    color: #ebf4f1;
+  background-color: #111927;
+  color: #ebf4f1;
 }
 
 .radius-lg {
-    border-radius: 6px;
+  border-radius: 6px;
 }
